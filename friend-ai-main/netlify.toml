@@ -1,0 +1,25 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+  functions = "netlify/functions"
+
+[build.environment]
+  # Using relative routing mapped to local Netlify functions
+
+[dev]
+  command = "npx vite"
+  targetPort = 5173
+
+# Proper video streaming headers
+[[headers]]
+  for = "/about-us.mp4"
+  [headers.values]
+    Content-Type = "video/mp4"
+    Accept-Ranges = "bytes"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/about-us-poster.jpg"
+  [headers.values]
+    Content-Type = "image/jpeg"
+    Cache-Control = "public, max-age=31536000, immutable"

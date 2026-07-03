@@ -1,0 +1,7 @@
+/api/chat              /.netlify/functions/chat             200
+/api/summarize-chat    /.netlify/functions/summarize-chat   200
+/api/mood-insights     /.netlify/functions/mood-insights    200
+/api/video-analysis    /.netlify/functions/video-analysis   200
+/api/solace-messages   /.netlify/functions/solace-messages  200
+/api/generate-blog     /.netlify/functions/generate-blog    200
+/*                     /index.html                          200
